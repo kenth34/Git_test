@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: poppins;
+      font-size: 11px;
+      font-weight: 700;
+      background-color: hsl(0, 0%, 93%);
+    }
+    .container{
+      background-color: hsl(0, 0%, 100%);
+      max-width: 510px;
+      width: 480px;
+      border-radius: 20px;
+      padding: 30px;
+      border-bottom-right-radius: 100px;
+      position: absolute;
+    }
+    .input-dob{
+      display: flex;
+      width: 410px;
+      align-items: left;
+      margin-bottom: 25px; 
+    }
+    input{
+      width: 112px;
+      margin-right: 12px ;
+      margin-top: -12px;
+      margin-bottom: 20px;
+      padding: 9px;
+      font-size: 17px;
+      font-weight: 900;
+      border-width: 1px;
+      border: 2px solid rgba(0,0,0,0.1);
+      border-radius: 7px;
+      outline-color:rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    ::placeholder{
+      color: hsl(0, 1%, 44%);
+    }
+    .error-textD, .error-textM, .error-textY{
+      margin-top: -15px;
+      margin-bottom: 5px;
+    }
+    .display-dob{
+      font-size: 42px;
+      font-weight: 800;
+      margin-top: -40px;
+      font-style: italic;
+    }
+   span{
+    content: "--";
+    color: hsl(259, 100%, 65%);
+   }
+   hr{
+    width: 390px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-left: -2px;
+   }
+    .equator img{
+      background-color: hsl(259, 100%, 65%);
+      border-radius: 50%;
+      padding: 15px;
+      width: 25px;
+      position: relative;
+      top: -35px;
+      left: 375px;
+    }   
+    .equator img:hover{
+      color: white;
+      background-color: #dd0000;
+      cursor: pointer;
+    }
+    .equator img:active{
+      background-color: black;
+      color: white;
+    }
+
+
+    .attribution { 
+    font-size: 12px; 
+    text-align: center;
+    position: relative;
+    bottom: -350px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 375px) {
+  /* CSS rules for screens with a width of 375px or less */
+  body {
+    background-color: #f0f0f0; /* Change the background color for mobile */
+    font-size: 14px; /* Adjust the font size for better readability on mobile */
+  }
+
+  .container {
+    width: 100%; /* Make the container full width on mobile */
+    border-radius: 0; /* Remove border radius on mobile */
+    padding: 20px; /* Reduce padding for mobile */
+  }
+
+  .input-dob {
+    flex-direction: column; /* Stack input fields vertically on mobile */
+  }
+
+  input {
+    width: 100%; /* Make input fields full width on mobile */
+    margin-right: 0; /* Remove right margin on mobile */
+    margin-bottom: 10px; /* Add spacing between input fields on mobile */
+  }
+
+  .display-dob {
+    font-size: 24px; /* Adjust font size for mobile */
+    margin-top: 20px; /* Add spacing at the top for mobile */
+  }
+
+  .equator img {
+    width: 20px; /* Reduce image size on mobile */
+    top: -20px; /* Adjust the image position on mobile */
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="input-dob">
+    <div>
+      <p class="paragraphD">DAY</p>
+      <input class="day" type="text" placeholder="DD" required>
+      <div class="error-textD"></div>
+    </div>
+    <div>
+      <p class="paragraphM">MONTH</p>
+      <input class="month" type="text" placeholder="MM" required>
+      <div class="error-textM"></div>
+    </div>
+    <div>
+      <p class="paragraphY">YEAR</p>
+      <input class="year" type="text" placeholder="YYYY" required>
+      <div class="error-textY"></div>
+    </div>
+  </div>
+  <div class="equator">
+    <hr>
+    <img src="assets/images/icon-arrow.svg" alt="">
+  </div>
+  <div class="display-dob">
+    <div><span class="ageInYears">--</span>Years</div>
+    <div><span class="ageInMonths">--</span>Months</div>
+    <div><span class="ageInDays">--</span>Days</div>
+  </div>
+</div>
+  
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ogbu Kenneth</a>.
+</div>
+
+<script src="agecalculator.js"></script>
+</body>
+</html>
